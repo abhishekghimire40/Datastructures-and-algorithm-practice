@@ -1,3 +1,6 @@
+# Provide all the subsets of a given set
+
+
 result = []
 temp = []
 
