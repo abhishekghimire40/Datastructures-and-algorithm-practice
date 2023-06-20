@@ -16,8 +16,6 @@ k is in the range [1, the number of unique elements in the array].
 It is guaranteed that the answer is unique.
 """
 
-from collections import defaultdict
-
 
 # Brute force method
 def kFrequent(nums, k):
@@ -52,7 +50,7 @@ def kFrequentOptimized(nums, k):
             count[nums[i]] = 1
     for key, val in count.items():
         res[val].append(key)
-    for i in range(len(nums) - 1, 0, -1):
+    for i in range(len(res) - 1, 0, -1):
         for j in res[i]:
             el.append(j)
             if len(el) == k:
